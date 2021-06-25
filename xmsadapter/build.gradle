@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.huawei.agconnect'
+apply from: 'scripts/productFlavor.gradle'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+}
+
+dependencies {
+    //Map
+    compileOnly 'com.google.android.gms:play-services-base:17.1.0'
+    compileOnly 'com.huawei.hms:maps:5.0.0.300'
+    compileOnly 'com.google.android.gms:play-services-maps:17.0.0'
+    compileOnly 'com.google.android.gms:play-services-basement:17.1.0'
+    compileOnly 'com.huawei.hms:location:5.1.0.303'
+    compileOnly 'com.google.android.gms:play-services-location:17.0.0'
+    compileOnly 'com.google.android.material:material:1.0.0-rc01'
+}
